@@ -62,7 +62,9 @@ public class FrameDangNhap extends JFrame implements ActionListener {
             if (tenDN.isEmpty() || mk.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "Vui lòng nhập đầy đủ thông tin!", "Lỗi", JOptionPane.ERROR_MESSAGE);
             } else {
-
+                frmQuanLyBanHang frm = new frmQuanLyBanHang();
+                frm.setVisible(true);
+                this.dispose();
             }
         }
     }
