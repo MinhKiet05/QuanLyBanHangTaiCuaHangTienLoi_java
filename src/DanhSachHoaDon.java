@@ -30,4 +30,11 @@ public class DanhSachHoaDon {
     }
 
 
+
+    // Tính tổng doanh thu theo ngày
+    public double tinhTongDoanhThuTheoNgay(LocalDateTime ngay) {
+        return timHoaDonTheoNgay(ngay).stream()
+                .mapToDouble(HoaDon::tinhTongThanhTien)
+                .sum();
+    }
 }
